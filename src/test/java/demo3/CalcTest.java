@@ -20,6 +20,7 @@ public class CalcTest {
 
 	@Before
 	public void setUp() throws Exception {
+		c1 = new Calc();
 	}
 
 	@After
