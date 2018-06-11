@@ -20,6 +20,7 @@ public class CalcTest {
 
 	@Before
 	public void setUp() throws Exception {
+		c1 = new Calc();
 	}
 
 	@After
@@ -41,7 +42,7 @@ public class CalcTest {
 	@Test
 	public void testDividebyzero() {
 		try {
-			int i = c1.divide("100", "0");
+			c1.divide("100", "0");
 		} catch (ArithmeticException e){
 			assertTrue("Divide by zero", true);
 		}		
@@ -50,7 +51,7 @@ public class CalcTest {
 	@Test
 	public void testDivideNonNumeric() {
 		try {
-			int i = c1.divide("A0", "20");
+			c1.divide("A0", "20");
 		} catch (NumberFormatException e){
 			assertTrue("Number format exception", true);
 		}		
